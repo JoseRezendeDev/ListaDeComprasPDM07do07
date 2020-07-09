@@ -35,11 +35,11 @@ public class ListaProdutoAdapter extends ArrayAdapter {
 
         View itemView = layoutInflater.inflate(R.layout.item_lista_produto, parent, false);
 
-        TextView lbNome = itemView.findViewById(R.id.txtNome);
-        TextView lbQuantidade = itemView.findViewById(R.id.txtQuantidade);
+        TextView lbNome = itemView.findViewById(R.id.nome);
+        TextView lbQuantidade = itemView.findViewById(R.id.quantidade);
 
         lbNome.setText(produto.getNome());
-        lbQuantidade.setText(produto.getQuantidade());
+        lbQuantidade.setText(Integer.toString(produto.getQuantidade()));
 
         return itemView;
     }
